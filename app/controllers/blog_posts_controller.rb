@@ -23,6 +23,26 @@ class BlogPostsController < ApplicationController
     end
   end
 
+  def edit
+    @blog_posts = BlogPost.find_by(slug: params[:slug])
+  end
+
+  def update
+    if blog_posts_params[:slug]
+      @blog_posts = BlogPost.find_by(slug: blog_posts_params[:slug])
+    else
+      @blog_posts = BlogPost.find_by(slug: params[:slug])
+    end
+    if @blog_posts.update(blog_posts_params)
+      flash[:success] = "Your BlogPost has been updated!"
+      redirect_to dashboard_blog_posts_path
+    else
+      flash[:danger] = @blog_posts.errors.full_messages
+      @blog_posts = BlogPost.find_by(id: params[:id])
+      render :edit
+    end
+  end
+
   private
   def blog_post_params
     params.require(:blog_post).permit(:title, :summary, :content, :published)
