@@ -68,7 +68,7 @@ test:
 # for a full rundown on how to provide these environment variables in a
 # production deployment.
 #
-# On Heroku and other platform providers, you may have a full connection URL
+# On Heroku and other platform providers, you may  have a full connection URL
 # available as an environment variable. For example:
 #
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
@@ -82,4 +82,4 @@ production:
   <<: *default
   database: mySite_production
   username: mySite
-  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  # password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
