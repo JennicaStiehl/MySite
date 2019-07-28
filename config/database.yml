@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: mySite_production
-  username: mySite
-  # password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: mysite
+  database: mysite
+  host: /cloudsql/mysite-248100:us-central1:mysite
