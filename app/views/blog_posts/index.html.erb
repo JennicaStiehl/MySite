@@ -1,4 +1,4 @@
-<h1>Blog Posts</h1>
+<h1>Blog Posts</h1> <%= link_to "Add a post", new_blog_post_path %>
 <% BlogPost.get_all.each do |blog_post| %>
 <div class="card" style="width: 72rem;">
   <div class="card-body">

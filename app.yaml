@@ -3,5 +3,6 @@ entrypoint: bundle exec rackup --port $PORT
   runtime: ruby
 env_variables:
   SECRET_KEY_BASE: 7d8457eea391613962bc73f431321a2d001fdfab4555153d257ba9463f8cc3cdbf1b436e91fabbac9c08124dfb0bb503a38c139fa00d14296cec13ccc9ffde12
+
 beta_settings;
   cloud_sql_instances: mysite-248100:us-central1:mysite

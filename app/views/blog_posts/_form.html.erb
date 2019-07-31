@@ -2,17 +2,17 @@
 <!--  form_for @item, url: dashboard_item_path(@item) do |f| -->
   <p>
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_area :title, size: "60x1"  %>
   </p>
 
   <p>
     <%= f.label :summary %>
-    <%= f.text_field :summary %>
+    <%= f.text_area :summary, size: "60x1" %>
   </p>
 
   <p>
     <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= f.text_area :content, size: "90x12" %>
   </p>
 
   <p>

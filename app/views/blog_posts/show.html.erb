@@ -7,6 +7,7 @@
           <div class="card-body">
             <p><%= @blog_post.summary %></p>
             <p><%= @blog_post.content %></p>
+            <p><%= link_to 'Edit', edit_blog_post_path(id: @blog_post) %> || <%= link_to 'All Blog Posts', blog_posts_path %></p>
           </div>
         </div>
       </div>
